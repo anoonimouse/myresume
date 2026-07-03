@@ -1,0 +1,25 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.pdftex
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.blg
+*.bbl
+*.run.xml
+*-blx.bib
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Scratch folder
+scratch/
+

@@ -1,0 +1,136 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=0.5in, right=0.5in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[colorlinks=false, hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\definecolor{subheadinggrey}{HTML}{555555}
+
+% Adjust list settings to match the original PDF's bullet indentation
+\setlist[itemize]{label=\raisebox{0.1ex}{\small\textbullet}, leftmargin=18pt, noitemsep, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+% Custom section command to match the original PDF's format
+\newcommand{\resumesection}[1]{%
+  \vspace{8pt}
+  \noindent{\large\textbf{#1}}
+  \vspace{2pt}
+  \hrule
+  \vspace{4pt}
+}
+
+% Custom subheading command for grey-colored text
+\newcommand{\subheading}[2]{%
+  \noindent\textit{\textcolor{subheadinggrey}{#1}} \hfill \textit{\textcolor{subheadinggrey}{#2}}%
+}
+
+% Page setup
+\pagenumbering{gobble} % Remove page numbers
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{Udit Chand Narayan}} \\
+    \vspace{2pt}
+    Jodhpur, India \\
+    \vspace{2pt}
+    +91-7376793856 \quad \href{mailto:nrynudt@gmail.com}{\underline{nrynudt@gmail.com}} \quad \href{https://uditc.me}{\underline{uditc.me}} \quad \href{https://linkedin.com/in/udit-chand-narayan-642253228}{\underline{LinkedIn}} \quad \href{https://github.com/anoonimouse}{\underline{GitHub}}
+\end{center}
+
+\resumesection{Education}
+\noindent \textbf{Indian Institute of Technology (IIT) Jodhpur} \hfill \textbf{2025 -- 2027} \\
+\subheading{Master of Technology (M.Tech)}{Jodhpur, India} \\
+\vspace{4pt} \\
+\noindent \textbf{University of Lucknow} \hfill \textbf{2021 -- 2025} \\
+\subheading{Bachelor of Technology in Electronics \& Communication Engineering}{CGPA: 7.37/10}
+
+\resumesection{Technical Skills}
+\begin{list}{}{%
+    \leftmargin=12pt
+    \rightmargin=0pt
+    \labelwidth=0pt
+    \labelsep=0pt
+    \itemindent=0pt
+    \parsep=2pt
+    \itemsep=0pt
+    \topsep=0pt
+    \partopsep=0pt
+}
+\item \textbf{Programming Languages:} Python, C++, JavaScript, TypeScript, HTML/CSS, SQL
+\item \textbf{Frameworks \& Tools:} Next.js, React, Node.js, Flask, Django, REST APIs, Git/GitHub, PostgreSQL, Prisma, Tailwind CSS, PWA, Three.js, Arduino, Burp Suite, Nmap, Metasploit
+\item \textbf{Core Competencies:} Full-Stack Web Development, Ephemeral Cryptography, Penetration Testing, Vulnerability Assessment, IoT Systems, Microcontroller Programming, Data Structures \& Algorithms
+\end{list}
+
+\resumesection{Experience}
+\noindent \textbf{Trainee -- Ethical Hacking \& Penetration Testing} \hfill \textbf{May 2024 -- Jun 2024} \\
+\subheading{Centre for Development of Advanced Computing (CDAC)}{Noida, India}
+\begin{itemize}
+    \item Conducted penetration testing and vulnerability assessments on Windows environments using industry-standard tools.
+    \item Performed reconnaissance, enumeration, and exploitation exercises to identify security weaknesses.
+    \item Documented security findings and collaborated with team on remediation strategies and secure coding practices.
+\end{itemize}
+\vspace{4pt}
+\noindent \textbf{Team Lead -- Samsung Innovation Hackathon} \hfill \textbf{September 2024} \\
+\subheading{Samsung}{Lucknow, India}
+\begin{itemize}
+    \item Led a cross-functional team to develop and deliver a functional prototype under tight deadline constraints.
+    \item Managed technical planning, task distribution, and rapid problem-solving to ensure project completion.
+\end{itemize}
+
+\resumesection{Projects}
+\noindent \textbf{Vesper -- Campus Companion PWA} | \textit{Next.js, React, TypeScript, Tailwind, PWA} | \href{https://vesperapp.fun}{\underline{vesperapp.fun}} \hfill \textbf{2026}
+\begin{itemize}
+    \item Engineered a campus Progressive Web Application (PWA) centralizing utilities for 4,000+ students at IIT Jodhpur.
+    \item Consolidated academic timetables, mess menus, maps, and notices into an offline-capable, mobile-first interface.
+\end{itemize}
+\vspace{4pt}
+\noindent \textbf{BunkYard -- Campus Merchandise Platform} | \textit{Next.js, Prisma, PostgreSQL} | \href{https://bunkyard.me}{\underline{bunkyard.me}} \hfill \textbf{2026}
+\begin{itemize}
+    \item Built a full-stack campus e-commerce store with product collections, shopping cart, and a secure checkout flow.
+    \item Developed a comprehensive admin dashboard for order processing and managed relational schemas with Prisma.
+\end{itemize}
+\vspace{4pt}
+\noindent \textbf{MomentBoard -- Memory Display SaaS} | \textit{Next.js, Tailwind, WebSockets} | \href{https://m.vesperapp.fun}{\underline{m.vesperapp.fun}} \hfill \textbf{2026}
+\begin{itemize}
+    \item Engineered a SaaS platform enabling event attendees to submit memories and photos for real-time display on large screens.
+    \item Implemented WebSocket-based real-time state synchronization and an intuitive moderation dashboard.
+\end{itemize}
+\vspace{4pt}
+\noindent \textbf{1Key -- Ephemeral End-to-End Encrypted Messaging} | \textit{Node.js, TypeScript, Web Crypto API} | \href{https://1key.uditc.me}{\underline{1key.uditc.me}} \hfill \textbf{2026}
+\begin{itemize}
+    \item Architected a privacy-first messaging platform with zero-identity login and E2EE using the Web Cryptography API.
+    \item Designed secure client-side key exchange and self-destructing states to guarantee absolute message confidentiality.
+\end{itemize}
+\vspace{4pt}
+\noindent \textbf{NEXUS -- Space Tech Society Platform} | \textit{Next.js, Three.js, Tailwind} | \href{https://nexus.vesperapp.fun}{\underline{nexus.vesperapp.fun}} \hfill \textbf{2026}
+\begin{itemize}
+    \item Designed an interactive platform for the Astronomy Society featuring 3D celestial visualizations and computational tools.
+    \item Integrated interactive celestial models using Three.js/WebGL to enhance user engagement.
+\end{itemize}
+
+\resumesection{Publications}
+\noindent \textbf{Optical-First ISAC Architectures: Hardware Enablers \& 6G Standardization} \hfill \textbf{2026} \\
+\subheading{Author}{\href{https://www.researchgate.net/publication/407072487_Optical-First_Integrated_Sensing_and_Communications_Architectures_Hardware_Enablers_and_6G_Standardization}{\underline{View Publication}} \quad Advised by Project Guide} \\
+Review paper investigating optical-domain ISAC, photonic hardware enablers, and B5G/6G standards.
+\vspace{4pt} \\
+\noindent \textbf{A Comprehensive Review of Wavelet-Based Image Compression Techniques} \hfill \textbf{2025} \\
+\subheading{Co-author}{\href{https://www.researchgate.net/publication/407072357_A_Comprehensive_Review_of_Wavelet-Based_Image_Compression_Techniques}{\underline{View Publication}}} \\
+Research paper investigating sub-band coding, wavelet transforms, and noise reduction algorithms.
+
+\resumesection{Certifications}
+\begin{list}{}{%
+    \leftmargin=12pt
+    \rightmargin=0pt
+    \labelwidth=0pt
+    \labelsep=0pt
+    \itemindent=0pt
+    \parsep=0pt
+    \itemsep=0pt
+    \topsep=0pt
+    \partopsep=0pt
+}
+\item Windows Vulnerability \& Security -- CDAC \ \href{https://raw.githubusercontent.com/anoonimouse/myresume/main/certificates/cdac_security.pdf}{\underline{[Credential]}} \quad | \quad Python Development Certification \ \href{https://raw.githubusercontent.com/anoonimouse/myresume/main/certificates/python_certification.pdf}{\underline{[Credential]}}
+\end{list}
+\end{document}
