@@ -1,0 +1,454 @@
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+
+\setlength{\multicolsep}{0pt}
+\setlength{\footskip}{4.08003pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\geometry{
+left=1.4cm,
+top=0.8cm,
+right=1.2cm,
+bottom=1cm
+}
+
+\tcbset{
+frame code={},
+center title,
+left=0pt,
+right=0pt,
+top=0pt,
+bottom=0pt,
+colback=gray!20,
+colframe=white,
+width=\dimexpr\textwidth\relax,
+enlarge left by=-2mm,
+boxsep=4pt,
+arc=0pt,
+outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%-----------SECTION FORMATTING-----------
+
+\titleformat{\section}{
+\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-----------CUSTOM COMMANDS-----------
+
+\newcommand{\resumeItem}[2]{
+\item{
+\textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+}
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+\end{tabular*}
+\vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \textit{\footnotesize{#4}} \\
+\textit{\footnotesize{#3}} & \footnotesize{#2}\\
+\end{tabular*}
+\vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \textit{\footnotesize{#3}} \\
+\footnotesize{\textit{#2}} & \footnotesize{#4}
+\end{tabular*}
+\vspace{-2.4mm}
+}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*,labelsep=0mm]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}\vspace{2mm}
+}
+
+\newcommand{\resumeItemListStart}{
+\begin{justify}
+\begin{itemize}[leftmargin=3ex,rightmargin=2ex,noitemsep,labelsep=1.2mm,itemsep=0mm]\small
+}
+
+\newcommand{\resumeItemListEnd}{
+\end{itemize}
+\end{justify}
+\vspace{-4mm}
+}
+
+%-----------CV STARTS HERE-----------
+
+\newcommand{\name}{Full Name}
+\newcommand{\course}{M.Tech - Computer Science and Engineering}
+\newcommand{\roll}{2023PCS00XX}
+\newcommand{\phone}{79834XXXXX}
+\newcommand{\emaila}{2023pcs00XX@iitjammu.ac.in}
+\newcommand{\emailb}{abc1234@gmail.com}
+
+\newcommand{\github}{githubusername}
+\newcommand{\linkedin}{linkedinusername}
+
+\begin{document}
+
+\fontfamily{cmr}\selectfont
+
+%-----------HEADING-----------
+
+\parbox{2.35cm}{
+\vspace{-0.75cm}
+\hspace{-0.2cm}
+\includegraphics[width=2.1cm,clip]{Indian_Institute_of_Technology,_Jammu_Logo.svg.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+
+\begin{tabularx}{\linewidth}{L r}
+
+\textbf{\LARGE \name} & \(+91\)-\phone \\
+
+{Roll No.: \roll} & \href{mailto:\emaila}{\emaila} \\
+
+\course & \href{mailto:\emailb}{\emailb} \\
+
+{Indian Institute Of Technology, Jammu}
+&
+\href{https://github.com/\github}{\faGithub\ Github}
+\\
+
+{}
+&
+\href{https://www.linkedin.com/in/\linkedin}{\faLinkedin\ LinkedIn}
+
+\end{tabularx}
+}
+
+\vspace{-2mm}
+
+%-----------EDUCATION-----------
+
+\section{Education}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Indian Institute of Technology Jammu}{Jammu, India}
+{M.Tech in Computer Science and Engineering \hfill CGPA: X.XX}{2023 -- 2025}
+
+\resumeSubheading
+{Aligarh Muslim University}{Aligarh, India}
+{B.Tech in Computer Science and Engineering \hfill CGPA: X.XX}{2019 -- 2023}
+
+% Uncomment if needed
+
+% \resumeSubheading
+% {Blue Bird Senior Secondary School}{Aligarh, India}
+% {Class XII \hfill Percentage: 89.8\%}{2018}
+
+% \resumeSubheading
+% {Blue Bird Senior Secondary School}{Aligarh, India}
+% {Class X \hfill CGPA: 9.6}{2016}
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------EXPERIENCE-----------
+
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{ABC Company}{Noida}
+{Software Developer Intern}{Jun 2022 -- Aug. 2022}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{XYZ Company}{Remote}
+{Flutter Developer Intern}{Mar 2022 -- Jun. 2022}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProject
+{ABC}
+{Course Project / Dr. XYZ, Assistant Professor, Dept. of CSE, IIT Jammu}
+{Mar 2024 -- May 2024}
+{\hfill \faGithub \hspace{0.5em} \href{}{Github}}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\resumeItemListEnd
+
+\resumeProject
+{DEF}
+{Course Project / Dr. PQR, Assistant Professor, Dept. of CSE, IIT Jammu}
+{Mar 2024 -- May 2024}
+{\hfill \faGithub \hspace{0.5em} \href{}{Github}}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+}
+
+\resumeItemListEnd
+
+\resumeProject
+{PQR}
+{Course Project / Dr. MNO, Assistant Professor, Dept. of CSE, IIT Jammu}
+{Mar 2024 -- May 2024}
+{\hfill \faGithub \hspace{0.5em} \href{}{Github}}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\resumeItemListEnd
+
+\resumeProject
+{XYZ}
+{B.Tech Project / Dr. ABC, Associate Professor, Dept. of CSE, Aligarh Muslim University}
+{Mar 2024 -- May 2024}
+{\hfill \faGithub \hspace{0.5em} \href{}{Github}}
+
+\resumeItemListStart
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\item{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------TECHNICAL SKILLS-----------
+
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=0.05in,itemsep=1.5mm]
+
+\small{
+
+\item{
+\textbf{Programming:} JAVA, Python*, JavaScript*
+\hfill \textit{* Elementary proficiency}
+}
+
+\item{
+\textbf{Web Skills:} HTML, CSS, ReactJS*, FlutterWeb
+}
+
+\item{
+\textbf{Tools:} Git, Google Teachable Machine, Google Colab, Canva
+}
+
+}
+
+\end{itemize}
+
+\vspace{-4mm}
+
+%-----------KEY COURSES-----------
+
+\section{Key Courses Taken}
+
+\begin{itemize}[leftmargin=0.05in]
+
+\small{
+
+\item{
+DBMS, Image Processing, Operating Systems, Deep Learning, Cryptography, Data Structures, Algorithms, Object Oriented Programming (OOPs)
+}
+
+}
+
+\end{itemize}
+
+\vspace{-4mm}
+
+%-----------POSITIONS OF RESPONSIBILITY-----------
+
+\section{Positions of Responsibility}
+
+\resumeSubHeadingListStart
+
+\resumePOR
+{Student Placement Coordinator,}
+{ Career \& Development Services, IIT Jammu}
+{2023 -- Present}
+
+\resumeItemListStart
+
+\item{
+Currently leading a team of 18 student representatives in outreach and industry relations.
+}
+
+\item{
+Cultivated relationships with top industry recruiters, boosting student placement opportunities by 30\%.
+}
+
+\resumeItemListEnd
+
+\resumePOR
+{Teaching Assistant,}
+{ Database Management System, IIT Jammu}
+{2024}
+
+\resumeItemListStart
+
+\item{
+Managed theory sessions for 55 students, clarifying DBMS concepts and conducting SQL workshops.
+}
+
+\resumeItemListEnd
+
+\resumePOR
+{Teaching Assistant,}
+{ Data Structures and Programming with Java, IIT Jammu}
+{2023}
+
+\resumeItemListStart
+
+\item{
+Conducted tutorial sessions and assisted over 270 students with coursework and evaluations.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-4mm}
+
+%-----------ACHIEVEMENTS-----------
+
+\section{Achievements}
+
+\resumeSubHeadingListStart
+
+\resumePOR{}
+{1XXX questions solved on Leetcode and GFG.}
+{Present}
+
+\resumePOR{}
+{Secured AIR XXXX in GATE CSE 2023 out of 1,1X,XXX students.}
+{2023}
+
+\resumePOR{}
+{Won Xth Prize in Utkraanti National Level Championship organized by IIT Bombay.}
+{2020}
+
+\resumePOR{}
+{Achieved AIR XX in AMU Engineering Entrance Examination.}
+{2019}
+
+\resumeSubHeadingListEnd
+
+\vspace{-4mm}
+
+%-----------END-----------
+
+\end{document}

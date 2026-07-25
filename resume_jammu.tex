@@ -1,0 +1,402 @@
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+
+\setlength{\multicolsep}{0pt}
+\setlength{\footskip}{4.08003pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\geometry{
+left=1.0cm,
+top=0.5cm,
+right=1.0cm,
+bottom=0.5cm
+}
+
+\tcbset{
+frame code={},
+center title,
+left=0pt,
+right=0pt,
+top=0pt,
+bottom=0pt,
+colback=gray!20,
+colframe=white,
+width=\dimexpr\textwidth\relax,
+enlarge left by=-2mm,
+boxsep=4pt,
+arc=0pt,
+outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%-----------SECTION FORMATTING-----------
+
+\titleformat{\section}{
+\vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+%-----------CUSTOM COMMANDS-----------
+
+\newcommand{\resumeItem}[2]{
+\item{
+\textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+}
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+\end{tabular*}
+\vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-0.5mm}\item
+\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \textit{\footnotesize{#4}} \\
+\textit{\footnotesize{#3}} & \footnotesize{#2}\\
+\end{tabular*}
+\vspace{-2.6mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{-0.5mm}\item
+\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \textit{\footnotesize{#3}} \\
+\footnotesize{\textit{#2}} & \footnotesize{#4}
+\end{tabular*}
+\vspace{-2.6mm}
+}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*,labelsep=0mm]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}\vspace{1.5mm}
+}
+
+\newcommand{\resumeItemListStart}{
+\begin{justify}
+\begin{itemize}[leftmargin=3ex,rightmargin=0pt,noitemsep,labelsep=1.2mm,itemsep=0mm,topsep=-1mm,partopsep=0mm]\small
+}
+
+\newcommand{\resumeItemListEnd}{
+\end{itemize}
+\end{justify}
+\vspace{-4.5mm}
+}
+
+%-----------CV STARTS HERE-----------
+
+\newcommand{\name}{Udit Chand Narayan}
+\newcommand{\course}{M.Tech - Communication and Signal Processing}
+\newcommand{\roll}{2026PSP0018}
+\newcommand{\phone}{7376793856}
+\newcommand{\emaila}{2026psp0018@iitjammu.ac.in}
+\newcommand{\emailb}{narayanudit095@gmail.com}
+
+\newcommand{\github}{anoonimouse}
+\newcommand{\linkedin}{udit-chand-narayan-642253228}
+
+\begin{document}
+
+\fontfamily{cmr}\selectfont
+
+%-----------HEADING-----------
+
+\parbox{2.35cm}{
+\vspace{-0.75cm}
+\hspace{-0.2cm}
+\includegraphics[width=2.1cm,clip]{Indian_Institute_of_Technology,_Jammu_Logo.svg.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+
+\begin{tabularx}{\linewidth}{L r}
+
+\textbf{\LARGE \name} & \(+91\)-\phone \\
+
+{Roll No.: \roll} & \href{mailto:\emaila}{\emaila} \\
+
+\course & \href{mailto:\emailb}{\emailb} \\
+
+{Indian Institute of Technology Jammu}
+&
+\href{https://github.com/\github}{\faGithub\ Github}
+\\
+
+{}
+&
+\href{https://www.linkedin.com/in/\linkedin}{\faLinkedin\ LinkedIn}
+
+\end{tabularx}
+}
+
+\vspace{-2mm}
+
+%-----------EDUCATION-----------
+
+\section{Education}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Indian Institute of Technology Jammu}{Jammu, India}
+{M.Tech in Communication and Signal Processing, Department of Electrical Engineering \hfill CGPA: --/10}{2026 -- 2028}
+
+\resumeSubheading
+{Indian Institute of Technology Jodhpur}{Jodhpur, India}
+{Master of Technology (M.Tech)}{2025 -- 2026}
+
+\resumeSubheading
+{University of Lucknow}{Lucknow, India}
+{B.Tech in Electronics \& Communication Engineering \hfill CGPA: 7.37/10}{2021 -- 2025}
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------EXPERIENCE-----------
+
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{BunkYard}{Jodhpur, India}
+{Founder \& Solo Developer}{2025 -- Present}
+
+\resumeItemListStart
+\item{Founded a campus lifestyle brand and built its full-stack e-commerce system, processing 200+ orders to date.}
+\item{Integrated Cashfree PG and engineered automated order-processing workflows and email status systems.}
+\item{Orchestrated technical operations and collaborated with sourcing and delivery teams to expand to multiple colleges.}
+\resumeItemListEnd
+
+\resumeSubheading
+{MyDiary.page}{Remote}
+{Founder \& Solo Developer}{Nov 2025 -- Present}
+
+\resumeItemListStart
+\item{Architected and launched a privacy-first journaling SaaS, growing to 500+ Monthly Active Users (MAUs).}
+\item{Engineered a subscription model with secure payment flows, acquiring 100+ paying customers.}
+\item{Designed secure chunked storage using Prisma/PostgreSQL, and built automated data backup/export utilities.}
+\resumeItemListEnd
+
+\resumeSubheading
+{PSB SBI Finnovation Hackathon}{IIT Jodhpur}
+{Team Lead}{2026}
+
+\resumeItemListStart
+\item{Secured Top 3 rank (exact rank to be announced) in the hackathon. \hfill \href{https://anoonimouse.github.io/myresume/sbi_finnovation_26_rotated.pdf}{\faExternalLink \hspace{0.3em} Credential}}
+\item{Managed project scope, led the development of the prototype, and coordinated team presentation.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Centre for Development of Advanced Computing (CDAC)}{Noida, India}
+{Trainee -- Ethical Hacking \& Penetration Testing}{May 2024 -- Jun 2024}
+
+\resumeItemListStart
+\item{Conducted penetration testing and vulnerability assessments on Windows environments using industry-standard tools.}
+\item{Performed reconnaissance, enumeration, and exploitation exercises to identify security weaknesses.}
+\item{Documented security findings and collaborated with team on remediation strategies and secure coding practices.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Samsung}{Lucknow, India}
+{Team Lead -- Samsung Innovation Hackathon}{September 2024}
+
+\resumeItemListStart
+\item{Led a cross-functional team to develop and deliver a functional prototype under tight deadline constraints.}
+\item{Managed technical planning, task distribution, and rapid problem-solving to ensure project completion.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProject
+{Vesper -- Campus Companion PWA}
+{Next.js, React, TypeScript, Tailwind, PWA}
+{2026}
+{\hfill \faGlobe \hspace{0.5em} \href{https://vesperapp.fun}{vesperapp.fun}}
+\resumeItemListStart
+\item{Engineered a campus Progressive Web Application (PWA) centralizing utilities for 4,000+ students at IIT Jodhpur.}
+\item{Consolidated academic timetables, mess menus, maps, and notices into an offline-capable, mobile-first interface.}
+\resumeItemListEnd
+
+\resumeProject
+{BunkYard -- Campus Merchandise Platform}
+{Next.js, Prisma, PostgreSQL}
+{2026}
+{\hfill \faGlobe \hspace{0.5em} \href{https://bunkyard.me}{bunkyard.me}}
+\resumeItemListStart
+\item{Built a full-stack campus e-commerce store with product collections, shopping cart, and a secure checkout flow.}
+\item{Developed a comprehensive admin dashboard for order processing and managed relational schemas with Prisma.}
+\resumeItemListEnd
+
+\resumeProject
+{MomentBoard -- Memory Display SaaS}
+{Next.js, Tailwind, WebSockets}
+{2026}
+{\hfill \faGlobe \hspace{0.5em} \href{https://m.vesperapp.fun}{m.vesperapp.fun}}
+\resumeItemListStart
+\item{Engineered a SaaS platform enabling event attendees to submit memories and photos for real-time display on large screens.}
+\item{Implemented WebSocket-based real-time state synchronization and an intuitive moderation dashboard.}
+\resumeItemListEnd
+
+\resumeProject
+{1Key -- Ephemeral End-to-End Encrypted Messaging}
+{Node.js, TypeScript, Web Crypto API}
+{2026}
+{\hfill \faGlobe \hspace{0.5em} \href{https://1key.uditc.me}{1key.uditc.me}}
+\resumeItemListStart
+\item{Architected a privacy-first messaging platform with zero-identity login and E2EE using the Web Cryptography API.}
+\item{Designed secure client-side key exchange and self-destructing states to guarantee absolute message confidentiality.}
+\resumeItemListEnd
+
+\resumeProject
+{NEXUS -- Space Tech Society Platform}
+{Next.js, Three.js, Tailwind}
+{2026}
+{\hfill \faGlobe \hspace{0.5em} \href{https://nexus.vesperapp.fun}{nexus.vesperapp.fun}}
+\resumeItemListStart
+\item{Designed an interactive platform for the Astronomy Society featuring 3D celestial visualizations and computational tools.}
+\item{Integrated interactive celestial models using Three.js/WebGL to enhance user engagement.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------PUBLICATIONS-----------
+
+\section{Publications}
+
+\resumeSubHeadingListStart
+
+\resumeProject
+{Optical-First ISAC Architectures: Hardware Enablers \& 6G Standardization}
+{Author \quad Advised by Project Guide}
+{2026}
+{\hfill \faExternalLink \hspace{0.5em} \href{https://www.researchgate.net/publication/407072487_Optical-First_Integrated_Sensing_and_Communications_Architectures_Hardware_Enablers_and_6G_Standardization}{View Publication}}
+
+\resumeItemListStart
+\item{Review paper investigating optical-domain ISAC, photonic hardware enablers, and B5G/6G standards.}
+\resumeItemListEnd
+
+\resumeProject
+{A Comprehensive Review of Wavelet-Based Image Compression Techniques}
+{Co-author}
+{2025}
+{\hfill \faExternalLink \hspace{0.5em} \href{https://www.researchgate.net/publication/407072357_A_Comprehensive_Review_of_Wavelet-Based_Image_Compression_Techniques}{View Publication}}
+
+\resumeItemListStart
+\item{Research paper investigating sub-band coding, wavelet transforms, and noise reduction algorithms.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-----------TECHNICAL SKILLS-----------
+
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=0.05in,itemsep=1.5mm]
+
+\small{
+
+\item{
+\textbf{Programming Languages:} Python, C++, JavaScript, TypeScript, HTML/CSS, SQL
+}
+
+\item{
+\textbf{Frameworks \& Tools:} Next.js, React, Node.js, Flask, Django, REST APIs, Git/GitHub, PostgreSQL, Prisma, Tailwind CSS, PWA, Three.js, Arduino, Burp Suite, Nmap, Metasploit, IBM Watson Studio
+}
+
+\item{
+\textbf{Core Competencies:} Full-Stack Web Development, Ephemeral Cryptography, Penetration Testing, Vulnerability Assessment, IoT Systems, Microcontroller Programming, Data Structures \& Algorithms, Machine Learning \& Deep Learning, Computer Vision \& NLP
+}
+
+}
+
+\end{itemize}
+
+\vspace{-4mm}
+
+%-----------CERTIFICATIONS-----------
+
+\section{Certifications}
+
+\begin{itemize}[leftmargin=0.05in,itemsep=1.5mm]
+
+\small{
+
+\item{
+\textbf{Top 3 Rank -- PSB SBI Finnovation Hackathon} \hfill \href{https://anoonimouse.github.io/myresume/sbi_finnovation_26_rotated.pdf}{\textit{Credential}}
+}
+
+\item{
+\textbf{Artificial Intelligence Fundamentals} -- IBM SkillsBuild \hfill \href{https://www.credly.com/badges/8ba0a78d-a8ae-420f-be36-503a01232c32/public_url}{\textit{Credential}}
+}
+
+\item{
+\textbf{Windows Vulnerability \& Security} -- CDAC Noida \hfill \href{https://anoonimouse.github.io/myresume/cdac_certificate.pdf}{\textit{Credential}}
+}
+
+\item{
+\textbf{Python Development Certification} \hfill \href{https://anoonimouse.github.io/myresume/python_certificate.pdf}{\textit{Credential}}
+}
+
+}
+
+\end{itemize}
+
+%-----------END-----------
+
+\end{document}
