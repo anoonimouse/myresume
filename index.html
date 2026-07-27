@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Udit Chand Narayan - M.Tech student at IIT Jammu. Resumes, publications, and professional certifications.">
-    <title>Udit Chand Narayan - Resume & Credentials</title>
+    <meta name="description" content="Udit Chand Narayan - M.Tech student at IIT Jammu. Resumes, Cover Letters, publications, and professional certifications.">
+    <title>Udit Chand Narayan - Portfolio & Credentials</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            --bg-color: #0d0e12;
-            --card-bg: #161822;
-            --text-primary: #f3f4f6;
-            --text-secondary: #9ca3af;
-            --accent: #60a5fa;
-            --accent-hover: #3b82f6;
-            --border-color: #26293b;
+            --bg-primary: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-start: #4f46e5; /* Indigo */
+            --accent-end: #06b6d4;   /* Cyan */
+            --accent-color: #4f46e5;
+            --border-color: rgba(226, 232, 240, 0.8);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
         * {
@@ -23,33 +38,65 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
             color: var(--text-primary);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+
+        /* Glowing background visual accents */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+            filter: blur(50px);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .blob-1 {
+            top: -10%;
+            left: -10%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .blob-2 {
+            bottom: -10%;
+            right: -10%;
+            animation: float 25s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -50px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
         }
 
         .container {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
             width: 100%;
-            max-width: 480px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.8s ease-out;
+            max-width: 900px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        @keyframes fadeIn {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -57,118 +104,415 @@
             }
         }
 
-        h1 {
-            font-size: 2.2rem;
+        /* Profile Header */
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+
+        .profile h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
             font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
-            letter-spacing: -0.025em;
         }
 
-        .subtitle {
+        .profile p.subtitle {
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            font-size: 1.05rem;
-            margin-bottom: 30px;
-            font-weight: 400;
+            font-weight: 500;
+            margin-bottom: 20px;
         }
 
-        .links-list {
+        .social-links {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             gap: 16px;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
-        .btn {
+        .social-icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: transparent;
-            color: var(--text-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #ffffff;
             border: 1px solid var(--border-color);
-            padding: 14px 20px;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background-color: rgba(96, 165, 250, 0.03);
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: var(--bg-color);
-            border-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            border-color: var(--accent-hover);
-            color: var(--bg-color);
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 0.85rem;
             color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
         }
 
-        .footer a {
-            color: var(--accent);
+        .social-icon:hover {
+            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            border-color: transparent;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Dashboard Grid Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .section-box {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .section-box.full-width {
+            grid-column: span 2;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Link Cards */
+        .doc-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
             text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .doc-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .doc-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .doc-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background-color: rgba(99, 102, 241, 0.08);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            transition: all 0.25s;
+        }
+
+        .doc-card:hover .doc-icon-wrapper {
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            color: #ffffff;
+        }
+
+        .doc-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .doc-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
             transition: color 0.2s;
         }
 
+        .doc-card:hover .doc-name {
+            color: var(--accent-color);
+        }
+
+        .doc-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .arrow-icon {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            transition: all 0.25s;
+        }
+
+        .doc-card:hover .arrow-icon {
+            color: var(--accent-color);
+            transform: translateX(4px);
+        }
+
+        /* Accent featured box */
+        .doc-card.featured {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.04), rgba(6, 182, 212, 0.04));
+            border: 1px dashed rgba(99, 102, 241, 0.4);
+        }
+
+        .doc-card.featured:hover {
+            border: 1px solid var(--accent-color);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.07), rgba(6, 182, 212, 0.07));
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
         .footer a:hover {
-            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .section-box.full-width {
+                grid-column: span 1;
+            }
+
+            .container {
+                padding: 32px 24px;
+            }
+
+            .profile h1 {
+                font-size: 2.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 24px 16px;
+                border-radius: 18px;
+            }
+            .doc-card {
+                padding: 14px 16px;
+            }
+            .doc-icon-wrapper {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            .profile h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <div class="container">
-        <h1>Udit Chand Narayan</h1>
-        <p class="subtitle">M.Tech Student @ IIT Jammu</p>
+        <!-- Header -->
+        <header class="profile">
+            <h1>Udit Chand Narayan</h1>
+            <p class="subtitle">M.Tech in Communication & Signal Processing | IIT Jammu</p>
+            
+            <div class="social-links">
+                <a id="email-academic-link" href="mailto:2026psp0018@iitjammu.ac.in" class="social-icon" title="Academic Email">
+                    <i class="fa-solid fa-envelope-open"></i>
+                </a>
+                <a id="email-personal-link" href="mailto:narayanudit095@gmail.com" class="social-icon" title="Personal Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a id="github-link" href="https://github.com/anoonimouse" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a id="linkedin-link" href="https://linkedin.com/in/udit-chand-narayan-642253228" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a id="portfolio-link" href="https://uditc.me" target="_blank" rel="noopener noreferrer" class="social-icon" title="Portfolio Website">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </div>
+        </header>
 
-        <div class="links-list">
-            <a id="resume-jammu-link" href="resume_jammu.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                View IIT Jammu Format Resume (PDF)
-            </a>
+        <!-- Main Dashboard -->
+        <main class="dashboard-grid">
             
-            <a id="resume-link" href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                View Standard Resume (1-Page PDF)
-            </a>
-            
-            <a id="full-resume-link" href="fullresume.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                View Full Resume (2-Page PDF)
-            </a>
-            
-            <a id="sbi-hackathon-cert-link" href="sbi_finnovation_26_rotated.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                PSB SBI Hackathon Credential
-            </a>
-            
-            <a id="ibm-ai-cert-link" href="https://www.credly.com/badges/8ba0a78d-a8ae-420f-be36-503a01232c32/public_url" target="_blank" rel="noopener noreferrer" class="btn">
-                IBM AI Fundamentals Certification
-            </a>
-            
-            <a id="cdac-cert-link" href="cdac_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                CDAC Security Certification
-            </a>
-            
-            <a id="python-cert-link" href="python_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                Python Certification
-            </a>
-        </div>
+            <!-- Resumes Column -->
+            <section class="section-box">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-file-invoice"></i> Resumes
+                </h2>
+                
+                <a id="resume-jammu-link" href="resume_jammu.pdf" target="_blank" rel="noopener noreferrer" class="doc-card featured">
+                    <div class="doc-info">
+                        <div class="doc-icon-wrapper">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="doc-details">
+                            <span class="doc-name">IIT Jammu Resume</span>
+                            <span class="doc-meta">M.Tech Format (Computer Modern)</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                </a>
 
-        <div class="footer">
-            <p>Back to <a id="github-profile-link" href="https://github.com/anoonimouse" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
-        </div>
+                <a id="resume-link" href="resume.pdf" target="_blank" rel="noopener noreferrer" class="doc-card">
+                    <div class="doc-info">
+                        <div class="doc-icon-wrapper">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="doc-details">
+                            <span class="doc-name">Standard Resume</span>
+                            <span class="doc-meta">1-Page General PDF</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                </a>
+
+                <a id="full-resume-link" href="fullresume.pdf" target="_blank" rel="noopener noreferrer" class="doc-card">
+                    <div class="doc-info">
+                        <div class="doc-icon-wrapper">
+                            <i class="fa-solid fa-copy"></i>
+                        </div>
+                        <div class="doc-details">
+                            <span class="doc-name">Full Resume</span>
+                            <span class="doc-meta">2-Page Detailed PDF</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                </a>
+            </section>
+
+            <!-- Cover Letters & Applications Column -->
+            <section class="section-box">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-envelope-open-text"></i> Applications
+                </h2>
+                
+                <a id="cover-letter-gs-link" href="goldman_sachs_cover_letter.pdf" target="_blank" rel="noopener noreferrer" class="doc-card featured">
+                    <div class="doc-info">
+                        <div class="doc-icon-wrapper">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <div class="doc-details">
+                            <span class="doc-name">Goldman Sachs Cover Letter</span>
+                            <span class="doc-meta">Engineering Summer Analyst 2027</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                </a>
+            </section>
+
+            <!-- Credentials & Certifications Full Width -->
+            <section class="section-box full-width">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-award"></i> Credentials & Certifications
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; width: 100%;">
+                    <a id="sbi-hackathon-cert-link" href="sbi_finnovation_26_rotated.pdf" target="_blank" rel="noopener noreferrer" class="doc-card">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrapper">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div class="doc-details">
+                                <span class="doc-name">SBI Finnovation Hackathon</span>
+                                <span class="doc-meta">Top 3 Rank Certificate</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                    </a>
+
+                    <a id="ibm-ai-cert-link" href="https://www.credly.com/badges/8ba0a78d-a8ae-420f-be36-503a01232c32/public_url" target="_blank" rel="noopener noreferrer" class="doc-card">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrapper">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="doc-details">
+                                <span class="doc-name">IBM AI Fundamentals</span>
+                                <span class="doc-meta">Credly Badge Credential</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                    </a>
+
+                    <a id="cdac-cert-link" href="cdac_certificate.pdf" target="_blank" rel="noopener noreferrer" class="doc-card">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrapper">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="doc-details">
+                                <span class="doc-name">CDAC Security Certification</span>
+                                <span class="doc-meta">Ethical Hacking & Pen Testing</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                    </a>
+
+                    <a id="python-cert-link" href="python_certificate.pdf" target="_blank" rel="noopener noreferrer" class="doc-card">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrapper">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="doc-details">
+                                <span class="doc-name">Python Development</span>
+                                <span class="doc-meta">Verified Certification</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Designed and Built by Udit Chand Narayan. Back to <a id="github-profile-link" href="https://github.com/anoonimouse" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+        </footer>
     </div>
 </body>
 </html>
